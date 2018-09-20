@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>三角型图标--CSS</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/triangle.css">
+    <link rel="stylesheet" href="../../css/max_media.css" media="screen and (min-width:1000px) and (max-width:2000px)">
+    <link rel="stylesheet" href="../../css/min_media.css" media="only screen and (min-width:2001px)">
+    <link rel="stylesheet" href="../../script/library/prism.css">
+    <script src="../../script/library/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <div id="learn">
+        <div id="header"></div>
+        <div class="learn_content">
+            <div id="directory"></div>
+            <div class="content">
+                <div class="achievement">
+                    <div class="arrow_box">
+                        <span class="arrow_box_title">
+                            UP
+                        </span>
+                    </div>
+                </div>
+                <div class="reference">
+                    <pre>
+                        <code class="language-css">
+.arrow_box {
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: -100px;
+  background: #88b7d5;
+  border: 4px solid #c2e1f5;
+  >span{
+    font: {
+      size: 70px;
+      family: Baskerville;
+    };
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+
+  }
+}
+.arrow_box:after, .arrow_box:before {
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  pointer-events: none;
+  content: " ";
+}
+
+.arrow_box:after {
+  border: {
+    bottom-color:#88b7d5 ;
+    width:30px;
+  };
+  margin-left: -30px;
+}
+.arrow_box:before {
+  border: {;
+    bottom-color: #c2e1f5;
+    width: 36px;
+  }
+  margin-left: -36px;
+}
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+      $(function () {
+        $('#header').load('../../pages/header.html');
+        $('#directory').load('../../pages/directory.html');
+      })
+
+    </script>
+    <script src="../../script/src/code.js"></script>
+    <script src="../../script/src/directory.js"></script>
+    <script src="../../script/library/prism.js"></script>
+
+</body>
+</html>

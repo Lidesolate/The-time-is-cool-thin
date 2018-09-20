@@ -1,0 +1,96 @@
+.clear_float::after{
+  content: '';
+  height: 0;
+  display: block;
+  clear:both;
+}
+html{
+  margin: 0;
+  padding: 0;
+  body{
+    height: 100%;
+    @extend html;
+    font: {
+      size: 14px;
+      family: "Arial";
+    };
+    #learn{
+      height: 1100px;
+      .learn_nav{
+        @extend #learn;
+        @extend .clear_float;
+        height: 70px;
+        border-radius: 10px;
+        box-shadow:5px 5px 5px #888;
+        .learn_title{
+          font-size: 30px;
+          line-height: 70px;
+          float: left;
+          margin-left: 50px;
+          color: cornflowerblue;
+        }
+
+      }
+      .learn_content{
+        margin: 5px 0 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        .learn_directory{
+          height: 100%;
+          margin-top: 5px;
+          padding: 25px;
+          background-color: #fff;
+          border-radius: 10px;
+          cursor: pointer;
+          >ul{
+            margin: 0 0px;
+            padding: 20px 50px;
+            >li{
+              list-style-type: none;
+              margin: 10px 0;
+              >a{
+                font-size: 20px;
+                text-decoration:none;
+                color: cornflowerblue;
+              }
+              >ul{
+                //display: none;
+                >li{
+                  list-style-type: none;
+                  margin: 5px 0;
+                  >a{
+                    text-decoration: none;
+                    color: cornflowerblue;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .content {
+          height: 100%;
+          flex: 1;
+          margin: 5px 0 0 5px;
+          padding: 25px;
+          background: antiquewhite;
+          border-radius: 10px;
+          .achievement {
+            width: 600px;
+            height: 600px;
+            float: right;
+            position: relative;
+            margin-top: 10px;
+            background: ghostwhite;
+        }
+          .reference {
+            width: cale(100%-600) px;
+            height: 1100px;
+            margin-right: 630px;
+            background: ghostwhite;
+          }
+        }
+      }
+    }
+  }
+}
